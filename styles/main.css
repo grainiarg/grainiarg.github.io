@@ -3327,3 +3327,7 @@ a {
           background-color: rgba(143,168,171,0.8);
         }
       
+    .navbar-inverse .navbar-nav>li>a{
+      color: antiquewhite;
+    }
+    
