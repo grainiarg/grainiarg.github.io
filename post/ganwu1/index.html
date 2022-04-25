@@ -31,12 +31,13 @@
     
     <style>
         .markdownIt-TOC {
+            margin-left: 28%;
             padding-left: 2px;
-            width: 100%;
+            width: 80%;
         }
 
         .markdownIt-TOC li {
-            padding-left: 2%;
+            padding-left: 8%;
         }
     </style>
     
@@ -140,6 +141,8 @@
         </li>
         
         
+        
+        <li><a data-pjax href="https://grainiarg.github.io/talk" style="color:white">说说</a></li>
         
         
           
@@ -250,117 +253,150 @@
 
     <!--------------- 左侧菜单栏👇 ------------------------>
     
+    <div id=side>
+        <div class="r_m_div">
+            <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
+                        src='https://grainiarg.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
+        </div>
+        <div class="avatar-border">
+            <img src="https://grainiarg.github.io/images/avatar.png?v=1650878981001" class="avatar">
+        </div>
+        <div class="sitename">Grainiarg的博客</div>
+        <span class="description" data-text='["永远仰望思想的光辉"]'>&nbsp;</span>
+        <div class="siteinfocontainer">
+            <span class="siteinfo">文章</span>
+            <span class="siteinfo">标签</span>
+        </div>
+        <div class="siteinfocontainer">
+            <span class="siteinfo" id="siteinfo-postsnum"></span>
+            <span class="siteinfo">1</span>
+        </div>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span></span>
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    <!------------ 加载菜单按钮👇 ------------------------->
+    <div class="menucontainer">
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="首页"></i>&nbsp;<span
+                    data-text="首页">首页</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/archives" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="归档"></i>&nbsp;<span
+                    data-text="归档">归档</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/tags" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="标签"></i>&nbsp;<span
+                    data-text="标签">标签</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/about" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="关于"></i>&nbsp;<span
+                    data-text="关于">关于</span>
+            </a>
+        </div>
+        
+        
+
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://grainiarg.github.io/talk" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="说说"></i>&nbsp;<span data-text="说说">说说</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://grainiarg.github.io/friends" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="友人帐"></i>&nbsp;<span data-text="友人帐">友人帐</span>
+            </a>
+        </div>
+        
+        <!--  -->
+    </div>
+    <!------------ 加载菜单按钮👆 ------------------------->
+    <hr>
+    <style>
+    .copyright {
+        font-size: 15px;
+        color: #d9d9d9;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .foot {
+            width: 100%;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .foot {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="foot">
+        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+    </div>
+
+    <img class="moon" src="https://grainiarg.github.io/media/images/moon.png" onclick="moonlight()">
+    <script src="https://grainiarg.github.io/media/js/wordshow.js"></script>
+    
     <!--------------- 左侧菜单栏👆 ------------------------>
 
     <!----------------- 顶部菜单栏👇 ------------------------>
-    
-    <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbartop">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a data-pjax class="navbar-brand" href="https://grainiarg.github.io"
-                        style="font-size:21px">Grainiarg的博客&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-                    <a class="navbar-brand topdescription" href=""
-                        style="font-size:15px;font-family:kaiti">永远仰望思想的光辉</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    
-                    <div class="search nav navbar-nav" style="margin-top:8px">
-                        <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-                        <input type="text" class="search-input"
-                            placeholder="标题搜索 ⚆_⚆ つ♡">
-                        <div class="search-results"></div>
-                    </div>
-                    
-                <div class="search nav navbar-nav searchtop">
-                <a title="社交信息" onclick="document.getElementById('socialMenu').style.display='block'" class="topshare-button"><i><img class="social"
-                    src="https://grainiarg.github.io/media/images/social.png"></i></a>
-                    <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
-                                src='https://grainiarg.github.io/media/images/music.png' alt="音乐播放器"
-                                class="musicbtn musictop"></i></a>
-                </div>
-                <ul class="nav navbar-nav" style="float: right;margin-right:5%">
-                    
-                    
-                    <li>
-                        <a data-pjax href="/"  class="menutopbutton">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="首页"></i>
-                            首页
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/archives"  class="menutopbutton">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="归档"></i>
-                            归档
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/tags"  class="menutopbutton">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="标签"></i>
-                            标签
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/post/about"  class="menutopbutton">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="关于"></i>
-                            关于
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a data-pjax href="https://grainiarg.github.io/friends"  class="menutopbutton">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="友人帐"></i>友人帐
-                        </a></li>
-                    
-                    <!--  -->
-                  <li><img src="https://grainiarg.github.io/images/avatar.png?v=1650873701042" alt=""
-                    class="menutopavatar"></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-    <div id="socialMenu">
-        <div class="animate">
-            <div class="socialContainer">
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
-            <div id="qq" style="display:none"></div>
-        </div>
-    </div>
-    <img class="moon" src="https://grainiarg.github.io/media/images/moon.png" onclick="moonlight()">
-    <script>
-        var social = document.getElementById('socialMenu');
-        var fancybox = document.getElementsByClassName('fancybox-stage');
-        // 鼠标点击模型外区域关闭登录框
-        window.onclick = function (event) {
-            if (event.target == social) {
-                social.style.display = "none";
-            }
-        }
-    </script>
-    </div>
     
     <!----------------- 顶部菜单栏👆 ------------------------>
 
@@ -439,29 +475,14 @@
     
     
     
-    观朴老师的事迹有感
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    
-    
-    Hello Gridea
-    <script>
-        postsnum += 1
-    </script>
-    
     
     </div>
     
         <script>
-            change_topmenu()
-            var menupos = 'top'
-            $(".topdescription").css("color","white")
+            var menupos = 'left';
+            $("#siteinfo-postsnum").html(postsnum);
         </script>
-        
+    
     <script>
         let commentsHide = false
     </script>
@@ -492,7 +513,7 @@
     get();
 
     function get() {
-        var t = JSON.parse('[]');
+        var t = JSON.parse('[{"author":"","img":"","text":"","time":""}]');
         talkindex = t.length - 1;
         for (var i = 0; i <= t.length - 1; i++) {
             var d = {};
@@ -953,11 +974,18 @@ menulist.eq(i).show();
 
             <!-- ----------------左侧菜单栏html 👇-------------------------------------->
             
-            <!--------------- 顶部菜单栏html👇--------->
             <div>
-                <div class="col-lg-3"></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
                 <!-- main标签，pjax渲染时加载以下内容👇 -->
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12  col-lg-6 posttop" style="padding:0;">
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
                     <div class="readingmode" onclick="readingmode()">阅</div>
                     <link rel="stylesheet" href="https://grainiarg.github.io/media/css/font-awesome.css">
 
@@ -966,7 +994,7 @@ menulist.eq(i).show();
         <div class="postshow postpadding" style="padding-bottom: 0;">
             
             <div class="postdetailimg">
-                <img src="D:/blog/img/pushu.webp" class="postimage" style="cursor:auto">
+                <img src="https://grainiarg.github.io/post-images/ganwu1.jpg" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2022-04-25</div>
@@ -1009,18 +1037,6 @@ menulist.eq(i).show();
         
         <div id="otherpost">
             
-            
-            <a data-pjax class="next-post-pc" href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/"  style="color: black;">
-                <div id="npcontainer">
-                    
-                    <img src="https://image.baidu.com/search/detail?ct=503316480&amp;z=0&amp;ipn=d&amp;word=%E6%9C%B4%E6%A0%91&amp;step_word=&amp;hs=0&amp;pn=25&amp;spn=0&amp;di=7077213605308923905&amp;pi=0&amp;rn=1&amp;tn=baiduimagedetail&amp;is=0%2C0&amp;istype=0&amp;ie=utf-8&amp;oe=utf-8&amp;in=&amp;cl=2&amp;lm=-1&amp;st=undefined&amp;cs=4135212145%2C2390444074&amp;os=2766188162%2C2556102355&amp;simid=3432261414%2C451361783&amp;adpicid=0&amp;lpn=0&amp;ln=1604&amp;fr=&amp;fmq=1650873230831_R&amp;fm=&amp;ic=undefined&amp;s=undefined&amp;hd=undefined&amp;latest=undefined&amp;copyright=undefined&amp;se=&amp;sme=&amp;tab=0&amp;width=undefined&amp;height=undefined&amp;face=undefined&amp;ist=&amp;jit=&amp;cg=&amp;bdtype=0&amp;oriquery=&amp;objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%3A%2F%2Fwww.sinaimg.cn%2Fent%2Fz%2Fy%2F2014-12-10%2FU5956P28T3D4254585F326DT20141210095136.jpg%26refer%3Dhttp%3A%2F%2Fwww.sinaimg.cn%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Dauto%3Fsec%3D1653465265%26t%3D9a6212fb231bade339c7f8bbfd5e5cba&amp;fromurl=ippr_z2C%24qAzdH3FAzdH3Fjgp_z%26e3Bftgw_z%26e3BvgAzdH3F47ftvAzdH3Fda89-8d-8aAzdH3F1jpwts-twoz7gjxc09b9bc_z%26e3B1_z%26e3Bip4s%3F154wtg%3Djgp_z%26e3Bftgw_z%26e3Bv54_z%26e3Bvg&amp;gsm=1a&amp;rpstart=0&amp;rpnum=0&amp;islist=&amp;querylist=&amp;nojc=undefined&amp;dyTabStr=MCwzLDEsNiw1LDQsOCwyLDcsOQ%3D%3D" style="width: 100%;" class="opimg">
-                    
-                    <h4 class="optitle">观朴老师的事迹有感</h4>
-                </div>
-            </a>
-            <div class="next-post">
-                下一篇 <a  data-pjax href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/">观朴老师的事迹有感</a>
-            </div>
             
         </div>
     </div>
@@ -1082,62 +1098,14 @@ menulist.eq(i).show();
                         </div>
                     </div>
                     <!---------------------------- 评论系统👆 ------------------------->
-
-                    <!-------------- 底部栏信息👇 -------------------->
-                    <div style="margin-top:5vh">
-                        
-                        <style>
-    .copyright {
-        font-size: 15px;
-        color: #d9d9d9;
-    }
-
-
-    @media screen and (min-width: 1200px) {
-        .foot {
-            width: 100%;
-            height: 130px;
-        }
-    }
-
-    @media screen and (max-width: 1200px) {
-        .foot {
-            display: none;
-        }
-    }
-</style>
-
-<body>
-    <div class="foot">
-        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
-                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
-            <div>
-                
-            </div>
-            <div>
-                
-            </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
-            </div>
-        </div>
-
-
-
-    </div>
-</body>
-
-                        
-                    </div>
-                    <!-------------- 底部栏信息👆 -------------------->
                 </div>
                 <!-- main标签，pjax渲染时加载以上内容👆 -->
-                <div class="col-md-2 col-lg-3">
-                </div>
+                <div class="col-md-1 col-lg-2"></div>
                 <div id="bg">
                 </div>
             </div>
-        <!--------------- 顶部菜单栏html👆--------->
-        
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+            
         </div>
         <!-- aplayer播放器加载👇 -->
             
@@ -1227,6 +1195,8 @@ menulist.eq(i).show();
 
 
 
+
+<script src="https://grainiarg.github.io/media/js/index.js"></script>
 
 
 <script>
