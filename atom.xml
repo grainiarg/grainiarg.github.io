@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://grainiarg.github.io</id>
     <title>Grainiarg的博客</title>
-    <updated>2022-04-24T06:48:23.859Z</updated>
+    <updated>2022-04-25T08:01:46.432Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://grainiarg.github.io"/>
     <link rel="self" href="https://grainiarg.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://grainiarg.github.io/images/avatar.png</logo>
     <icon>https://grainiarg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Grainiarg的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[观朴老师的事迹有感]]></title>
+        <id>https://grainiarg.github.io/post/ganwu1/</id>
+        <link href="https://grainiarg.github.io/post/ganwu1/">
+        </link>
+        <updated>2022-04-25T07:41:18.000Z</updated>
+        <content type="html"><![CDATA[<p>时代的裹胁下，我们要何去何从？<br>
+都说现在的人越来越清晰要做什么，该怎么来，该怎么弄。这很奇怪吧？明明都是懵懂的，些许迷茫的，却充满希望的少年，怎么扼杀了那么多的可能性,为什么都活成了一个样子。</p>
+<hr>
+待看完《后会无期》再来看待这样的问题<br>
+《肖申克的救赎》 ：让你难过的事情，有一天，你会笑着说出来了。
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[观朴老师的事迹有感]]></title>
+        <id>https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/</id>
+        <link href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/">
+        </link>
+        <updated>2022-04-25T07:41:18.000Z</updated>
+        <content type="html"><![CDATA[<p>时代的裹胁下，我们要何去何从？<br>
+都说现在的人越来越清晰要做什么，该怎么来，该怎么弄。这很奇怪吧？明明都是懵懂的，些许迷茫的，却充满希望的少年，怎么扼杀了那么多的可能性,为什么都活成了一个样子。</p>
+<hr>
+待看完《后会无期》再来看待这样的问题
+《肖申克的救赎》 中说：让你难过的事情，有一天，你会笑着说出来了。
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://grainiarg.github.io/post/hello-gridea/</id>

@@ -2,22 +2,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="description" content="时代的裹胁下，我们要何去何从？
+都说现在的人越来越清晰要做什么，该怎么来，该怎么弄。这很奇怪吧？明明都是懵懂的，些许迷茫的，却充满希望的少年，怎么扼杀了那么多的可能性,为什么都活成了一个样子。
+
+待看完《后会无期》再来看待这样的问题
+《肖申..." />
+    <meta name="keywords" content="些许感悟" />
     <link rel="stylesheet" href="https://grainiarg.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://grainiarg.github.io/media/css/live2d.css">
     <link rel="stylesheet" href="https://grainiarg.github.io/styles/main.css">
-    <link rel="stylesheet" href="https://grainiarg.github.io/media/css/font-awesome.css">
-    <meta name="description" content="永远仰望思想的光辉" />
-    <title>Grainiarg的博客</title>
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://grainiarg.github.io/media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>观朴老师的事迹有感</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            padding-left: 2px;
+            width: 100%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 2%;
+        }
+    </style>
+    
 </head>
 
-
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://grainiarg.github.io</div>
     <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <div class="side"><head>
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" style="color:white" href="https://grainiarg.github.io">Grainiarg的博客&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/" style="color:white">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives" style="color:white">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags" style="color:white">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about" style="color:white">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        <li><a data-pjax href="https://grainiarg.github.io/friends" style="color:white">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
     <link rel="stylesheet" href="https://grainiarg.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://grainiarg.github.io/styles/main.css">
     
@@ -781,264 +949,143 @@ menulist.eq(i).show();
     }
 </script>
 <!----夜间模式👆--></div>
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            <!--------------- pc端菜单栏👆 ---------------->
+
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <!--------------- 顶部菜单栏html👇--------->
+            <div>
+                <div class="col-lg-3"></div>
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12  col-lg-6 posttop" style="padding:0;">
+                    <div class="readingmode" onclick="readingmode()">阅</div>
+                    <link rel="stylesheet" href="https://grainiarg.github.io/media/css/font-awesome.css">
+
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                <img src="D:/blog/img/pushu.webp" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2022-04-25</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="posttag">
+                    
+                    <a data-pjax href="https://grainiarg.github.io/tag/0wYgRECnI/" class="postlink">
+                        <i class="fa fa-tag"></i> 些许感悟
+                    </a>
+                    
+                </div>
+            </div>
+            
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">观朴老师的事迹有感</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://grainiarg.github.io/post/ganwu1/</div>
+                <div id="rootaddr" style="display:none">https://grainiarg.github.io</div>
                 
-                <div class="mobilebar"><style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+            </div>
+            <div class="text ">
+                <p>时代的裹胁下，我们要何去何从？<br>
+都说现在的人越来越清晰要做什么，该怎么来，该怎么弄。这很奇怪吧？明明都是懵懂的，些许迷茫的，却充满希望的少年，怎么扼杀了那么多的可能性,为什么都活成了一个样子。</p>
+<hr>
+待看完《后会无期》再来看待这样的问题<br>
+《肖申克的救赎》 ：让你难过的事情，有一天，你会笑着说出来了。
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong></li>
+            <li><strong>原文链接：</strong>https://grainiarg.github.io/post/ganwu1/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        
+        <div id="otherpost">
+            
+            
+            <a data-pjax class="next-post-pc" href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://image.baidu.com/search/detail?ct=503316480&amp;z=0&amp;ipn=d&amp;word=%E6%9C%B4%E6%A0%91&amp;step_word=&amp;hs=0&amp;pn=25&amp;spn=0&amp;di=7077213605308923905&amp;pi=0&amp;rn=1&amp;tn=baiduimagedetail&amp;is=0%2C0&amp;istype=0&amp;ie=utf-8&amp;oe=utf-8&amp;in=&amp;cl=2&amp;lm=-1&amp;st=undefined&amp;cs=4135212145%2C2390444074&amp;os=2766188162%2C2556102355&amp;simid=3432261414%2C451361783&amp;adpicid=0&amp;lpn=0&amp;ln=1604&amp;fr=&amp;fmq=1650873230831_R&amp;fm=&amp;ic=undefined&amp;s=undefined&amp;hd=undefined&amp;latest=undefined&amp;copyright=undefined&amp;se=&amp;sme=&amp;tab=0&amp;width=undefined&amp;height=undefined&amp;face=undefined&amp;ist=&amp;jit=&amp;cg=&amp;bdtype=0&amp;oriquery=&amp;objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%3A%2F%2Fwww.sinaimg.cn%2Fent%2Fz%2Fy%2F2014-12-10%2FU5956P28T3D4254585F326DT20141210095136.jpg%26refer%3Dhttp%3A%2F%2Fwww.sinaimg.cn%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Dauto%3Fsec%3D1653465265%26t%3D9a6212fb231bade339c7f8bbfd5e5cba&amp;fromurl=ippr_z2C%24qAzdH3FAzdH3Fjgp_z%26e3Bftgw_z%26e3BvgAzdH3F47ftvAzdH3Fda89-8d-8aAzdH3F1jpwts-twoz7gjxc09b9bc_z%26e3B1_z%26e3Bip4s%3F154wtg%3Djgp_z%26e3Bftgw_z%26e3Bv54_z%26e3Bvg&amp;gsm=1a&amp;rpstart=0&amp;rpnum=0&amp;islist=&amp;querylist=&amp;nojc=undefined&amp;dyTabStr=MCwzLDEsNiw1LDQsOCwyLDcsOQ%3D%3D" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">观朴老师的事迹有感</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/">观朴老师的事迹有感</a>
+            </div>
+            
+        </div>
     </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" style="color:white" href="https://grainiarg.github.io">Grainiarg的博客&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li>
-          <a data-pjax href="/" style="color:white">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives" style="color:white">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags" style="color:white">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about" style="color:white">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        <li><a data-pjax href="https://grainiarg.github.io/friends" style="color:white">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
-                </div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 topindex">
-                    <div class="mobilebar">
-                        <img src="" alt="" class="plbg">
-<script>
-    var bgchoice = "link";
-    if(bgchoice=='default')
-        var plbgurl = "/media/images/custom-mobilebg.jpg"
-    else  
-        var plbgurl = ""
-    $(".plbg").attr("src",plbgurl);
-    $(".plbg").fadeIn(200);
-</script>
-                    </div>
-                    <body>
-    <div class="archives-bg"></div>
-    <div class="archives-content">
-        
-        
-        <div class="archives-year">2022</div>
-        <ul>
-            
-            
-            <li><span></span>
-                <div>
-                  <a data-pjax href="https://grainiarg.github.io/post/ganwu1/" class="post">
-                    <div class="archives-title">观朴老师的事迹有感</div>
-                    <div class="archives-time">2022-04-25</div>
-                </a>
-                    
-                </div>
-            </li>
-            
-            
-            
-            <li><span></span>
-                <div>
-                  <a data-pjax href="https://grainiarg.github.io/post/guan-po-lao-shi-de-shi-ji-you-gan/" class="post">
-                    <div class="archives-title">观朴老师的事迹有感</div>
-                    <div class="archives-time">2022-04-25</div>
-                </a>
-                    
-                </div>
-            </li>
-            
-            
-            
-            
-        </ul>
-        
-        <div class="archives-year">2018</div>
-        <ul>
-            
-            
-            
-            
-            
-            
-            <li><span></span>
-                <div>
-                  <a data-pjax href="https://grainiarg.github.io/post/hello-gridea/" class="post">
-                    <div class="archives-title">Hello Gridea</div>
-                    <div class="archives-time">2018-12-12</div>
-                </a>
-                    
-                </div>
-            </li>
-            
-            
-        </ul>
-        
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
     </div>
 </body>
-                    <div>
-                        <div class="pcpagi">
-    <div class="pagi">
-        <ul>
-            
-            <li><a style="width:100px">&nbsp;</a></li>
-            
-                    <li><a id="page1">1</a></li>
-                    <li><a id="page2" class="active">2</a></li>
-                    <li><a id="page3">3</a></li>
-                    
-            <li><a style="width:100px">&nbsp;</a></li>
-            
-                </ul>
-    </div>
-</div>
+<script>
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
+                    <div class="toc-container">
+                        
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👇 ------------------------->
+                    <div id="comment" class="comment">
+                        <div class="commentcontainer">
+                            
+                                
+                                    
+                                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-<div id="pagination-prev" style="display:none"> 
-</div>
-<div id="pagination-next" style="display:none"> </div>
-
-<div class="pagination-container">
-      
-    
-</div>
+<div id="gitalk-container"></div>
 
 <script>
-    var prevstr = document.getElementById("pagination-prev").innerHTML;
-    var nextstr = document.getElementById("pagination-next").innerHTML;
-    var page1 = document.getElementById("page1");
-    var page2 = document.getElementById("page2");
-    var page3 = document.getElementById("page3");
-    page1.innerHTML = '-';
-    page2.innerHTML = '1';
-    page3.innerHTML = '-';
-    if (prevstr.length > 5) {
-        if (prevstr.indexOf("page/") != -1) {
-            var prevnum = parseInt(prevstr.split("page/")[1]);
-            page1.innerHTML = prevnum;
-            page2.innerHTML = prevnum + 1;
-        } else {
-            page1.innerHTML = 1;
-            page2.innerHTML = 2;
-        }
-    }
-    if (nextstr.indexOf("page/") != -1) {
-        var nextnum = parseInt(nextstr.split("page/")[1]);
-        page3.innerHTML = nextnum;
-        page2.innerHTML = nextnum - 1;
-    }
+
+  var gitalk = new Gitalk({
+    clientID: '0e581d3ca4fb1f079447',
+    clientSecret: '8fca13232cea79776c40177d00e0d5fe14f588d5',
+    repo: 'Codinglittleboy.github.io',
+    owner: 'Codinglittleboy',
+    admin: ['Codinglittleboy'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
 </script>
-                        <div style="padding-bottom:10%"></div>
+
+                                    
+                                    
+                                
+                            
+                        </div>
                     </div>
-                    
+                    <!---------------------------- 评论系统👆 ------------------------->
+
+                    <!-------------- 底部栏信息👇 -------------------->
+                    <div style="margin-top:5vh">
+                        
                         <style>
     .copyright {
         font-size: 15px;
@@ -1079,35 +1126,51 @@ menulist.eq(i).show();
     </div>
 </body>
 
-                    
+                        
+                    </div>
+                    <!-------------- 底部栏信息👆 -------------------->
+                </div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
+                <div class="col-md-2 col-lg-3">
+                </div>
+                <div id="bg">
+                </div>
+            </div>
+        <!--------------- 顶部菜单栏html👆--------->
+        
+        </div>
+        <!-- aplayer播放器加载👇 -->
+            
+        <!-- aplayer播放器加载👆 -->
+    </div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
                 </div>
                 
-                <!------------------ 顶部菜单栏html👆--------->
-                <div class="col-xs-6 col-sm-3"></div>
-            </div>
-            
-        </div>
-        <div id="bg">
-        </div>
-        <!------- 背景图加载方式👇----- -->
-        <div id="bgchoice" style="display: none">link
-            </div>
-            
-            <div id="bgurl" style="display:none"></div>
-               
-        <!------- 背景图加载方式👆----- -->
-    </div>
-
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://grainiarg.github.io
-        </div>
+                <div id="bgurl" style="display:none"></div>
+                
+    <!-- 背景图加载方式👆 -->
 </body>
 
-</html>
-<!-------------------- live2d功能👇 --------------------------->
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1119,7 +1182,29 @@ menulist.eq(i).show();
     loadlive2d("live2d", "https://grainiarg.github.io/media/live2d/assets/tororo.model.json");
 </script>
 
-<!-------------------- live2d功能👆 --------------------------->
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
@@ -1139,3 +1224,28 @@ menulist.eq(i).show();
     }
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+
+
+
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://grainiarg.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
